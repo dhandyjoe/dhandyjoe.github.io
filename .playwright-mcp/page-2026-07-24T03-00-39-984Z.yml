@@ -1,0 +1,140 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e110]:
+    - list [ref=e112]:
+      - listitem [ref=e113]:
+        - link "Projects" [ref=e114] [cursor=pointer]:
+          - /url: index.html
+      - listitem [ref=e115]:
+        - link "About Me" [ref=e116] [cursor=pointer]:
+          - /url: about.html
+      - listitem [ref=e117]:
+        - link "Contact" [ref=e118] [cursor=pointer]:
+          - /url: contact.html
+    - generic [ref=e120]:
+      - generic [ref=e121]:
+        - generic [ref=e122]: 
+        - paragraph [ref=e124]:
+          - text: Dhandy Joenathan
+          - link "linkedin.com/in/dhandyjoenathan/" [ref=e125] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/dhandyjoenathan/
+      - generic [ref=e126]:
+        - generic [ref=e127]: 
+        - paragraph [ref=e129]:
+          - text: dhandyjoe
+          - link "github.com/dhandyjoe/" [ref=e130] [cursor=pointer]:
+            - /url: https://github.com/dhandyjoe
+    - generic [ref=e131]:
+      - heading "Hire Me" [level=3] [ref=e132]
+      - paragraph [ref=e133]:
+        - text: If you're interested, please email me at
+        - link "dhanjoenkp@gmail.com" [ref=e134] [cursor=pointer]:
+          - /url: mailto:dhanjoenkp@gmail.com
+  - navigation "Primary" [ref=e3]:
+    - generic [ref=e4]:
+      - link "My Portfolio." [ref=e5] [cursor=pointer]:
+        - /url: index.html
+      - button "Close menu" [expanded] [active] [ref=e135] [cursor=pointer]
+  - main [ref=e8]:
+    - generic [ref=e10]:
+      - generic [ref=e12]:
+        - generic [ref=e13]: Available for opportunities
+        - heading "Hey, I'm Dhandy Joenathan" [level=1] [ref=e14]
+        - paragraph [ref=e15]: Software Quality Assurance Engineer | Automation Test Enthusiast | QA | SDET | Selenium | Appium
+        - generic "Focus areas" [ref=e16]:
+          - generic [ref=e17]: Quality Assurance
+          - generic [ref=e18]: Test Automation
+          - generic [ref=e19]: SDET
+          - generic [ref=e20]: Mobile & Web
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - generic [ref=e23]: Selected work
+          - heading "Projects" [level=2] [ref=e24]
+        - tablist "Filter projects" [ref=e25]:
+          - tab "All" [selected] [ref=e26] [cursor=pointer]
+          - tab "Web" [ref=e27] [cursor=pointer]
+          - tab "Android" [ref=e28] [cursor=pointer]
+          - tab "Quality Assurance" [ref=e29] [cursor=pointer]
+          - tab "Database" [ref=e30] [cursor=pointer]
+      - generic [ref=e31]:
+        - link [ref=e33] [cursor=pointer]:
+          - /url: https://github.com/dhandyjoe/LesGoo#welcome-to-lesgoo-make-your-roadtrip-easier
+          - generic [ref=e34]:
+            - heading "LesGoo" [level=3] [ref=e35]
+            - text: Web App
+          - img "LesGoo web app project" [ref=e37]
+        - link [ref=e39] [cursor=pointer]:
+          - /url: https://github.com/dhandyjoe/dicoding.stockku.capstone#capstone-project---stockku
+          - generic [ref=e40]:
+            - heading "stockku" [level=3] [ref=e41]
+            - text: Android App
+          - img "stockku Android app project" [ref=e43]
+        - link [ref=e45] [cursor=pointer]:
+          - /url: https://github.com/dhandyjoe/database-design-spotify#database-design-spotify
+          - generic [ref=e46]:
+            - heading "Database Design Spotify" [level=3] [ref=e47]
+            - text: Database
+          - img "Database Design Spotify project" [ref=e49]
+        - link [ref=e51] [cursor=pointer]:
+          - /url: https://github.com/dhandyjoe/appdevo-mobile
+          - generic [ref=e52]:
+            - heading "KBM Appdevo" [level=3] [ref=e53]
+            - text: Android App
+          - img "KBM Appdevo Android project" [ref=e55]
+        - link [ref=e57] [cursor=pointer]:
+          - /url: https://github.com/dhandyjoe/Appium-SimpleCalculatorApp
+          - generic [ref=e58]:
+            - heading "Appium" [level=3] [ref=e59]
+            - text: Testing
+          - img "Appium testing project" [ref=e61]
+        - link [ref=e63] [cursor=pointer]:
+          - /url: https://github.com/dhandyjoe/Movie-App-Local
+          - generic [ref=e64]:
+            - heading "Movie-ku" [level=3] [ref=e65]
+            - text: Android App
+          - img "Movie-ku Android app project" [ref=e67]
+        - link [ref=e69] [cursor=pointer]:
+          - /url: https://github.com/dhandyjoe/SeleniumCucumber-SauceDemo
+          - generic [ref=e70]:
+            - heading "Selenium" [level=3] [ref=e71]
+            - text: Testing
+          - img "Selenium testing project" [ref=e73]
+        - link [ref=e75] [cursor=pointer]:
+          - /url: https://github.com/dhandyjoe/capstone-alterra-LesGoo-RestAssured#-reports
+          - generic [ref=e76]:
+            - heading "Rest Assured" [level=3] [ref=e77]
+            - text: Testing
+          - img "Rest Assured testing project" [ref=e79]
+        - link [ref=e81] [cursor=pointer]:
+          - /url: https://github.com/dhandyjoe/7-Minute-Work-Out
+          - generic [ref=e82]:
+            - heading "7 Minute Work Out" [level=3] [ref=e83]
+            - text: Android App
+          - img "7 Minute Work Out Android project" [ref=e85]
+        - link [ref=e87] [cursor=pointer]:
+          - /url: https://github.com/dhandyjoe/SimpleQuizApp-Kotlin#simplequizapp-kotlin
+          - generic [ref=e88]:
+            - heading "Quizz App" [level=3] [ref=e89]
+            - text: Android App
+          - img "Quiz App Android project" [ref=e91]
+  - contentinfo [ref=e92]:
+    - generic [ref=e93]:
+      - generic [ref=e94]:
+        - generic [ref=e95]:
+          - link "My Portfolio." [ref=e96] [cursor=pointer]:
+            - /url: index.html
+          - paragraph [ref=e97]: Software Quality Assurance · SDET
+        - generic [ref=e98]:
+          - link "GitHub" [ref=e99] [cursor=pointer]:
+            - /url: https://github.com/dhandyjoe
+            - generic [ref=e100]: 
+          - link "LinkedIn" [ref=e101] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/dhandyjoenathan/
+            - generic [ref=e102]: 
+          - link "Email" [ref=e103] [cursor=pointer]:
+            - /url: mailto:dhanjoenkp@gmail.com
+            - generic [ref=e104]: 
+      - generic [ref=e105]:
+        - paragraph [ref=e106]: © 2026 Dhandy Joenathan. All rights reserved.
+        - paragraph [ref=e107]: Designed by dhandyjoe

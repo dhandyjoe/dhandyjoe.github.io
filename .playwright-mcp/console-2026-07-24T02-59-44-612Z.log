@@ -1,0 +1,36 @@
+[     387ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  154708ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  156403ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  157502ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  158866ms] [INFO] Launched external handler for 'mailto:dhanjoenkp@gmail.com?subject=Mobile%20QA&body=Name%3A%20Tester%20Mobile%0AEmail%3A%20tester%40example.com%0A%0ATesting%20contact%20form%20from%20mobile%20viewport.'. @ http://127.0.0.1:8080/contact.html:0
+[  159576ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  209041ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  210453ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  211451ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  212440ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  320029ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  322112ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  323121ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  324112ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  329153ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  331180ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  332184ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  333156ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  338143ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  340216ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  341193ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  342216ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  347234ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  348680ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  349685ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  350672ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  418345ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  426086ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  426788ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  429509ms] [INFO] Launched external handler for 'mailto:dhanjoenkp@gmail.com?subject=Hello%20there&body=Name%3A%20Tester%0AEmail%3A%20ok%40test.com%0A%0AThis%20is%20a%20long%20enough%20message.'. @ http://127.0.0.1:8080/contact.html:0
+[  430018ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  431136ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  432260ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  502861ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  508440ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
+[  513853ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.0 @ http://127.0.0.1:8080/vendor/jquery/jquery-migrate.min.js:1
