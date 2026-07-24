@@ -1,0 +1,114 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "WorshipNotationScore Chord & Number Score Builder" [ref=e3] [cursor=pointer]:
+      - /url: "#"
+      - generic [ref=e5]:
+        - text: WorshipNotationScore
+        - generic [ref=e6]: Chord & Number Score Builder
+    - generic [ref=e7]:
+      - generic [ref=e8]: Active for this session
+      - button "Dark" [ref=e10] [cursor=pointer]: ☾Dark
+      - generic [ref=e11] [cursor=pointer]:
+        - generic [ref=e12]: ↑
+        - text: Upload .file
+      - button "Export .file" [ref=e13] [cursor=pointer]: ↓ Export .file
+      - button "Export .pdf" [ref=e14] [cursor=pointer]: ↗ Export .pdf
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]: SONG ARRANGER
+      - heading "Arrange chords and number notation, ready to play." [level=1] [ref=e18]
+      - paragraph [ref=e19]: Choose a chord or number notation, then tap or drag it onto a beat in the preview.
+    - generic [ref=e20]:
+      - complementary [ref=e21]:
+        - generic [ref=e22]:
+          - generic [ref=e23]:
+            - generic [ref=e24]: ARRANGEMENT TOOLS
+            - strong [ref=e25]: Chord palette
+          - button "Expand toolbar" [ref=e26] [cursor=pointer]:
+            - generic [ref=e27]: ⌃
+        - tablist [ref=e29]:
+          - tab "Chord" [selected] [ref=e30] [cursor=pointer]
+          - tab "Slash Chord" [ref=e31] [cursor=pointer]
+          - tab "Nashville" [ref=e32] [cursor=pointer]
+          - tab "Rhythm" [ref=e33] [cursor=pointer]
+          - tab "Lyrics" [ref=e34] [cursor=pointer]
+      - generic [ref=e35]:
+        - generic "Preview controls" [ref=e36]:
+          - generic [ref=e37]:
+            - strong [ref=e39]: Document canvas
+            - generic [ref=e40]: Refreshing resets the score
+          - generic [ref=e41]:
+            - button "Zoom out" [ref=e42] [cursor=pointer]: −
+            - status [ref=e43]: 100%
+            - button "Zoom in" [ref=e44] [cursor=pointer]: +
+            - button "Fit width" [ref=e45] [cursor=pointer]
+            - button "PDF layout" [ref=e46] [cursor=pointer]
+        - generic "Chord score canvas, horizontally scrollable" [ref=e47]:
+          - generic [ref=e48]:
+            - generic [ref=e49]:
+              - generic [ref=e50]:
+                - text: LIVE PREVIEW
+                - heading "Song Title" [level=2] [ref=e51] [cursor=pointer]
+                - paragraph [ref=e52] [cursor=pointer]:
+                  - text: "Created by:"
+                  - emphasis [ref=e53]: Artist / Composer
+              - generic [ref=e54]:
+                - generic [ref=e55]:
+                  - text: KEY
+                  - generic "Click to edit key" [ref=e56] [cursor=pointer]: C
+                - generic [ref=e57]:
+                  - text: TIME SIGNATURE
+                  - generic "Click to edit time signature" [ref=e58] [cursor=pointer]: 4/4
+                - generic [ref=e59]:
+                  - text: TRANSPOSE
+                  - generic [ref=e60]:
+                    - button "Transpose down one semitone" [ref=e61] [cursor=pointer]: −
+                    - button "Transpose up one semitone" [ref=e62] [cursor=pointer]: +
+            - generic "Chord drag-and-drop area" [ref=e64]:
+              - generic [ref=e65]:
+                - generic [ref=e66]:
+                  - button "INTRO" [ref=e68] [cursor=pointer]
+                  - generic [ref=e69]:
+                    - generic [ref=e70]: 4 bars · 4 beats per bar
+                    - button "+ Add 1 bar" [ref=e71] [cursor=pointer]
+                    - group [ref=e72]:
+                      - generic "Options for Intro" [ref=e73] [cursor=pointer]: •••
+                - generic [ref=e75]:
+                  - generic [ref=e76]:
+                    - button "Delete bar 1" [ref=e77] [cursor=pointer]: ×
+                    - generic [ref=e78]: ·
+                    - generic [ref=e82]: ·
+                    - generic [ref=e86]: ·
+                    - generic [ref=e90]: ·
+                  - generic [ref=e94]:
+                    - button "Delete bar 2" [ref=e95] [cursor=pointer]: ×
+                    - generic [ref=e96]: ·
+                    - generic [ref=e100]: ·
+                    - generic [ref=e104]: ·
+                    - generic [ref=e108]: ·
+                  - generic [ref=e112]:
+                    - button "Delete bar 3" [ref=e113] [cursor=pointer]: ×
+                    - generic [ref=e114]: ·
+                    - generic [ref=e118]: ·
+                    - generic [ref=e122]: ·
+                    - generic [ref=e126]: ·
+                  - generic [ref=e130]:
+                    - button "Delete bar 4" [ref=e131] [cursor=pointer]: ×
+                    - generic [ref=e132]: ·
+                    - generic [ref=e136]: ·
+                    - generic [ref=e140]: ·
+                    - generic [ref=e144]: ·
+            - generic [ref=e148]:
+              - generic [ref=e149]: Drag a chord from the toolbar onto a beat.
+              - generic [ref=e150]:
+                - button "Reset Sheet" [ref=e151] [cursor=pointer]
+                - button "+ Add section" [ref=e152] [cursor=pointer]
+  - contentinfo [ref=e153]:
+    - generic [ref=e154]:
+      - generic [ref=e157]:
+        - strong [ref=e158]: WorshipNotationScore
+        - paragraph [ref=e159]: Built with care by dhandyjoenathan for worship musicians and teams.
+      - generic "Project information" [ref=e160]:
+        - generic [ref=e161]: Open source
+        - generic [ref=e163]: Free to use, learn from, and improve.
+  - status
