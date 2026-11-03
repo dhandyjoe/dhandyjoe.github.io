@@ -1,0 +1,24 @@
+---
+import { site } from '../data/site';
+---
+
+<footer class="site-footer">
+  <div class="footer-in">
+    <div class="ghost" aria-hidden="true" data-text={site.handle}></div>
+    <div class="footer-meta">
+      <span class="copy">
+        © {new Date().getFullYear()} {site.name}. All rights reserved.
+      </span>
+      <span class="role">{site.role}</span>
+      <div class="footer-links">
+        <a href={site.github.url} target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+        <a href={site.linkedin.url} target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
+      </div>
+      <span class="by">Designed by {site.handle}</span>
+    </div>
+  </div>
+</footer>

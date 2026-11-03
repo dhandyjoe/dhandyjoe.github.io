@@ -1,0 +1,71 @@
+---
+import { Image } from 'astro:assets';
+import DownloadIcon from './DownloadIcon.astro';
+import photo from '../assets/photo-update.jpg';
+import { site } from '../data/site';
+import { tools } from '../data/tools';
+---
+
+<section id="about" class="about tt" aria-labelledby="about-h">
+  <div class="about-in">
+    <div class="photo-wrap reveal">
+      <Image
+        class="photo"
+        src={photo}
+        alt="Portrait of Dhandy Joenathan"
+        widths={[390, 640, 960]}
+        sizes="(max-width: 760px) calc(100vw - 32px), 640px"
+        format="webp"
+        loading="lazy"
+      />
+      <span class="badge">{site.role}</span>
+    </div>
+
+    <div class="about-copy">
+      <span class="label">02 / About Me</span>
+      <h2 id="about-h" class="quote reveal">
+        “Developer making awesome things for awesome people.”
+      </h2>
+      <div class="prose reveal">
+        <p>
+          I'm a highly motivated Software Quality Engineer with hands-on experience since 2022,
+          specializing in both manual testing and test automation. I bring a strong foundation in
+          object-oriented programming and end-to-end testing strategy — from designing comprehensive
+          test plans to building robust, maintainable automation frameworks.
+        </p>
+        <p>
+          I'm proficient in industry-standard tools including Cypress, Katalon, and k6 for load
+          testing, with a proven track record of keeping software reliable in day-to-day operations
+          — catching issues early so teams can ship with confidence.
+        </p>
+        <p class="small">Graduate of the Quality Engineer Bootcamp at Alterra Academy.</p>
+      </div>
+      <div class="skills reveal">
+        <span class="label">Skills &amp; tools</span>
+        <ul>
+          {tools.map((t) => (
+            <li class="tt">{t}</li>
+          ))}
+        </ul>
+      </div>
+      <div class="about-actions">
+        <a class="btn btn-solid tt" href={site.resume} target="_blank" rel="noopener noreferrer">
+          <span>Download resume</span>
+          <DownloadIcon />
+          <span class="sr">(PDF, opens in a new tab)</span>
+        </a>
+        <a
+          class="btn btn-line tt"
+          href={site.linkedin.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn ↗
+        </a>
+        <a class="btn btn-line tt" href={site.github.url} target="_blank" rel="noopener noreferrer">
+          GitHub ↗
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

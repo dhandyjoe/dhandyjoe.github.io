@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  pull_request:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run format:check
+      - run: npm run build # astro check + astro build
+      - run: npx playwright test # e2e + axe, uses the runner's preinstalled Chrome
+      - run: npx lhci autorun # budgets in lighthouserc.json

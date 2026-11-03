@@ -1,0 +1,301 @@
+/* Keyframes and animation classes from the design canvas.
+   Fix vs the canvas: the stick-figure "glass" classes collided with the dock's `.glass`
+   (the dock wobbled), so they are named .lens/.lens2 here. Entrance animations use
+   `backwards` fill so they don't pin `transform` and override hover/tilt afterwards. */
+@keyframes rise {
+  from {
+    transform: translateY(110%);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes rot {
+  0%,
+  20% {
+    transform: translateY(0);
+  }
+  25%,
+  45% {
+    transform: translateY(-1.2em);
+  }
+  50%,
+  70% {
+    transform: translateY(-2.4em);
+  }
+  75%,
+  95% {
+    transform: translateY(-3.6em);
+  }
+  100% {
+    transform: translateY(-4.8em);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes marq {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes iconin {
+  from {
+    transform: rotate(-120deg) scale(0.3);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes wave {
+  0%,
+  7%,
+  100% {
+    transform: none;
+  }
+  3.5% {
+    transform: translateY(-0.09em) rotate(-4deg);
+  }
+}
+@keyframes hop {
+  0%,
+  100% {
+    transform: none;
+  }
+  45% {
+    transform: translateY(-0.16em) scale(1.06);
+  }
+}
+@keyframes peek {
+  0%,
+  100% {
+    transform: none;
+  }
+  25% {
+    transform: rotate(-6deg);
+  }
+  50% {
+    transform: translateY(-0.03em) rotate(3deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+@keyframes lens {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: rotate(-16deg);
+  }
+}
+@keyframes tilt {
+  from {
+    transform: rotate(-8deg);
+  }
+  to {
+    transform: rotate(8deg);
+  }
+}
+@keyframes walk {
+  0% {
+    left: 0;
+    transform: scaleX(1);
+  }
+  47% {
+    left: calc(100% - 0.3em);
+    transform: scaleX(1);
+  }
+  50% {
+    left: calc(100% - 0.3em);
+    transform: scaleX(-1);
+  }
+  97% {
+    left: 0;
+    transform: scaleX(-1);
+  }
+  100% {
+    left: 0;
+    transform: scaleX(1);
+  }
+}
+@keyframes step {
+  from {
+    transform: rotate(-16deg);
+  }
+  to {
+    transform: rotate(16deg);
+  }
+}
+@keyframes bob {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-1.5px);
+  }
+}
+@keyframes wavearm {
+  from {
+    transform: rotate(-12deg);
+  }
+  to {
+    transform: rotate(26deg);
+  }
+}
+
+.rise {
+  display: block;
+  animation: rise 1.1s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
+}
+.fade {
+  animation: fade 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) backwards 0.55s;
+}
+.fade2 {
+  animation: fade 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) backwards 0.8s;
+}
+.ltr {
+  display: inline-block;
+  animation: rise 1s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
+  animation-delay: calc(var(--i) * 45ms + 60ms);
+}
+.wv {
+  display: inline-block;
+  cursor: default;
+  animation: wave 7s ease-in-out calc(var(--i) * 70ms + 2.4s) infinite;
+  transition: color 0.2s ease;
+}
+.wv:hover {
+  color: var(--accent);
+  animation: hop 0.55s cubic-bezier(0.3, 1.6, 0.5, 1);
+}
+
+.rot {
+  display: inline-block;
+  height: 1.2em;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+.rot-in {
+  display: flex;
+  flex-direction: column;
+  animation: rot 10s cubic-bezier(0.75, 0, 0.2, 1) infinite;
+}
+.rot-in span {
+  display: block;
+  height: 1.2em;
+  line-height: 1.2em;
+}
+.spin {
+  animation: spin 0.8s linear infinite;
+}
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marq 40s linear infinite;
+}
+.icon-in {
+  animation: iconin 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Stick figures */
+.stick {
+  display: block;
+  overflow: visible;
+  flex-shrink: 0;
+}
+.stick g,
+.stick line,
+.stick circle {
+  transform-box: fill-box;
+}
+.peek {
+  transform-origin: 50% 100%;
+  animation: peek 4.5s ease-in-out infinite;
+}
+.lens {
+  transform-origin: 0% 100%;
+  animation: lens 2.2s ease-in-out infinite;
+}
+.lens2 {
+  transform-origin: 0% 20%;
+  animation: tilt 0.5s ease-in-out infinite alternate;
+}
+.walker {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% - 0.1em);
+  animation: walk 11s linear infinite;
+}
+.legA {
+  transform-origin: 100% 0;
+  animation: step 0.5s ease-in-out infinite alternate;
+}
+.legB {
+  transform-origin: 0 0;
+  animation: step 0.5s ease-in-out infinite alternate-reverse;
+}
+.armSwing {
+  transform-origin: 100% 0;
+  animation: step 0.5s ease-in-out infinite alternate-reverse;
+}
+.bob {
+  animation: bob 0.5s ease-in-out infinite alternate;
+}
+.wave-arm {
+  transform-origin: 0% 100%;
+  animation: wavearm 0.7s ease-in-out infinite alternate;
+}
+
+/* Scroll-driven reveal (progressive enhancement; no JS, no AOS) */
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: fade linear backwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+  }
+}
+
+@media (max-width: 760px) {
+  .marquee {
+    animation-duration: 32s;
+  }
+  .walker {
+    animation-duration: 9s;
+  }
+  .bob {
+    animation-name: bob-m;
+  }
+  @keyframes bob-m {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-1px);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

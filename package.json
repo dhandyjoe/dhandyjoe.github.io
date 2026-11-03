@@ -1,0 +1,33 @@
+{
+  "name": "dhandyjoe-portfolio",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "playwright test",
+    "lhci": "lhci autorun"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "3.7.4",
+    "@fontsource-variable/bricolage-grotesque": "5.3.0",
+    "@fontsource/jetbrains-mono": "5.3.0",
+    "astro": "7.4.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.12",
+    "@axe-core/playwright": "4.14.0",
+    "@lhci/cli": "0.16.0",
+    "@playwright/test": "1.64.1",
+    "prettier": "3.9.10",
+    "prettier-plugin-astro": "1.1.2",
+    "typescript": "6.0.3"
+  }
+}

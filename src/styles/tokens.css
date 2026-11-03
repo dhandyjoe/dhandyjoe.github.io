@@ -1,0 +1,105 @@
+/* Design tokens, copied from the Claude design canvas (Main/Dark/Mobile artboards). */
+:root {
+  color-scheme: light;
+  --accent: #c8f031;
+  --font-sans: 'Bricolage Grotesque Variable', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --bg: #f3f2ec;
+  --bg2: #ecebe4;
+  --surface: #fbfaf6;
+  --fg: #111110;
+  --fg2: #34332f;
+  --muted: #5e5d57;
+  --line: #dedcd3;
+  --border: #cfcdc3;
+  --card-border: #d6d4ca;
+  --grid: rgba(17, 17, 16, 0.06);
+  --btn-bg: #111110;
+  --btn-fg: #f3f2ec;
+  --outline: #111110;
+  --band: #111110;
+  --band-fg: #edebe3;
+  --band-dot: var(--accent);
+  --term: #111110;
+  --term-border: #111110;
+  --stripe-a: #dcdad0;
+  --stripe-b: #e4e2d9;
+  --tab-bg: #111110;
+  --tab-fg: #f3f2ec;
+  --tab-count: var(--accent);
+  --dot-stroke: 3px #111110;
+  --contact-line: #2e2e2b;
+  --mail-color: #edebe3;
+  --ghost: #222220;
+  --glow: 0;
+
+  --glass-bg: rgba(255, 255, 255, 0.62);
+  --glass-bd: rgba(17, 17, 16, 0.1);
+  --glass-sh: 0 12px 40px -14px rgba(17, 17, 16, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  --dock-hover: rgba(17, 17, 16, 0.06);
+  --dock-active: #111110;
+  --dock-active-fg: #f3f2ec;
+
+  --card-hover-bg: #111110;
+  --card-hover-fg: #f3f2ec;
+  --card-hover-muted: #b9b8b0;
+  --card-hover-arrow-bg: var(--accent);
+  --card-hover-arrow-fg: #111110;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #0d0d0c;
+  --bg2: #121211;
+  --surface: #161614;
+  --fg: #edebe3;
+  --fg2: #c4c2ba;
+  --muted: #9a988f;
+  --line: #23231f;
+  --border: #34332f;
+  --card-border: #2a2a27;
+  --grid: rgba(237, 235, 227, 0.05);
+  --btn-bg: #edebe3;
+  --btn-fg: #0d0d0c;
+  --outline: #4a4944;
+  --band: var(--accent);
+  --band-fg: #0d0d0c;
+  --band-dot: #0d0d0c;
+  --term: #161614;
+  --term-border: #2e2e2b;
+  --stripe-a: #1d1d1b;
+  --stripe-b: #171715;
+  --tab-bg: var(--accent);
+  --tab-fg: #0d0d0c;
+  --tab-count: #0d0d0c;
+  --dot-stroke: 0 transparent;
+  --contact-line: #23231f;
+  --mail-color: var(--accent);
+  --ghost: #1c1c1a;
+  --glow: 0.11;
+
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-bd: rgba(255, 255, 255, 0.14);
+  --glass-sh: 0 12px 40px -12px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  --dock-hover: rgba(255, 255, 255, 0.07);
+  --dock-active: rgba(0, 0, 0, 0.6);
+  --dock-active-fg: #edebe3;
+
+  --card-hover-bg: var(--accent);
+  --card-hover-fg: #0d0d0c;
+  --card-hover-muted: #2b2b28;
+  --card-hover-arrow-bg: #0d0d0c;
+  --card-hover-arrow-fg: var(--accent);
+}
+
+/* Mobile artboard: thinner dot stroke, stronger glow. */
+@media (max-width: 760px) {
+  :root {
+    --dot-stroke: 2px #111110;
+  }
+  :root[data-theme='dark'] {
+    --dot-stroke: 0 transparent;
+    --glow: 0.13;
+  }
+}

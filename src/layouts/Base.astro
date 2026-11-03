@@ -1,0 +1,70 @@
+---
+import '@fontsource-variable/bricolage-grotesque/opsz.css';
+import '@fontsource/jetbrains-mono/latin-400.css';
+import '@fontsource/jetbrains-mono/latin-500.css';
+import '../styles/tokens.css';
+import '../styles/motion.css';
+import '../styles/global.css';
+import bricolage from '@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-opsz-normal.woff2?url';
+import { site } from '../data/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+  noindex?: boolean;
+}
+
+const {
+  title = 'Dhandy Joenathan — QA Engineer & SDET Portfolio',
+  description = site.description,
+  noindex = false,
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, site.url).href;
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: site.name,
+  jobTitle: 'Software Quality Assurance Engineer',
+  url: site.url,
+  email: `mailto:${site.email}`,
+  sameAs: [site.github.url, site.linkedin.url],
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#f3f2ec" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0d0d0c" media="(prefers-color-scheme: dark)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preload" as="font" type="font/woff2" href={bricolage} crossorigin />
+    <script type="application/ld+json" set:html={JSON.stringify(person)} />
+    <!-- Set the theme before first paint to avoid a flash. -->
+    <script is:inline>
+      (function () {
+        var t;
+        try {
+          t = localStorage.getItem('theme');
+        } catch (e) {}
+        if (t !== 'light' && t !== 'dark') {
+          t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.dataset.theme = t;
+      })();
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

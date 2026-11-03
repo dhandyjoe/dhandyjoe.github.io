@@ -1,0 +1,68 @@
+---
+import { suite } from '../data/tools';
+---
+
+<div
+  class="runner fade2 tt"
+  id="runner"
+  role="img"
+  aria-label={`Animated test runner: ${suite.length} automated test suites run and pass`}
+  data-total={suite.length}
+>
+  <div class="runner-head">
+    <span>$ run portfolio.suite</span>
+    <span id="runner-count">0/{suite.length}</span>
+  </div>
+  <div class="runner-bar">
+    <i id="runner-bar"></i>
+  </div>
+  <ul>
+    {suite.map((s, i) => (
+      <li data-state={i === 0 ? 'running' : 'idle'}>
+        <span class="st">
+          <span class="spin"></span>
+          <span class="pass">PASS</span>
+          <span class="idle">····</span>
+        </span>
+        <span class="nm">{s.name}</span>
+        <span class="tool">{s.tool}</span>
+      </li>
+    ))}
+  </ul>
+  <div class="runner-sum" id="runner-sum">
+    running 1 of {suite.length}…
+  </div>
+</div>
+
+<script>
+  const root = document.getElementById('runner')!;
+  const total = Number(root.dataset.total);
+  const rows = [...root.querySelectorAll('li')];
+  const bar = document.getElementById('runner-bar')!;
+  const count = document.getElementById('runner-count')!;
+  const sum = document.getElementById('runner-sum')!;
+
+  // tick 0..9: rows 0..total-1 run in turn, the remaining ticks hold the "all passed" state.
+  function render(t: number) {
+    rows.forEach((row, i) => (row.dataset.state = t > i ? 'done' : t === i ? 'running' : 'idle'));
+    const done = Math.min(t, total);
+    bar.style.width = `${(done / total) * 100}%`;
+    count.textContent = `${done}/${total}`;
+    sum.textContent = t >= total ? `${total} passed · 0 failed` : `running ${t + 1} of ${total}…`;
+    sum.classList.toggle('ok', t >= total);
+  }
+
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    render(total);
+  } else {
+    let t = 0;
+    let timer: number | undefined;
+    const start = () => (timer ??= window.setInterval(() => render((t = (t + 1) % 10)), 850));
+    const stop = () => {
+      clearInterval(timer);
+      timer = undefined;
+    };
+    // Only tick while on screen.
+    new IntersectionObserver(([e]) => (e!.isIntersecting ? start() : stop())).observe(root);
+  }
+</script>
