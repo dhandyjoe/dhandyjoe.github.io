@@ -1,0 +1,54 @@
+---
+import SplitText from './SplitText.astro';
+import StickFigure from './StickFigure.astro';
+import { site } from '../data/site';
+
+const rows = [
+  { k: 'Email', v: site.email, href: `mailto:${site.email}`, ext: false },
+  { k: 'LinkedIn', v: site.linkedin.label, href: site.linkedin.url, ext: true },
+  { k: 'GitHub', v: site.github.label, href: site.github.url, ext: true },
+  { k: 'Resume', v: 'Download PDF', href: site.resume, ext: true },
+];
+---
+
+<section id="contact" class="contact" aria-labelledby="contact-h">
+  <div class="contact-in">
+    <div class="contact-head">
+      <span class="label">03 / Contact</span>
+      <h2 id="contact-h" class="talk reveal" aria-label="Let's talk.">
+        <span class="line" aria-hidden="true">
+          <SplitText text="Let's talk" />
+          <span class="wv dot" style="--i:10">
+            .
+          </span>
+          <StickFigure variant="wave" />
+        </span>
+      </h2>
+      <p class="contact-lead">
+        Open to job opportunities, collaborations, and questions. If you're interested, please email
+        me at
+      </p>
+      <div>
+        <a class="mail" href={`mailto:${site.email}`}>
+          {site.email}
+        </a>
+      </div>
+    </div>
+
+    <div class="rows">
+      {rows.map((r) => (
+        <a
+          class="row"
+          href={r.href}
+          target={r.ext ? '_blank' : undefined}
+          rel={r.ext ? 'noopener noreferrer' : undefined}
+        >
+          <span class="k">{r.k}</span>
+          <span class="v">{r.v}</span>
+          <span aria-hidden="true">↗</span>
+          {r.ext && <span class="sr">(opens in a new tab)</span>}
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

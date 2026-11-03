@@ -1,0 +1,24 @@
+---
+// Splits text into per-letter spans for the wave/rise animations. The parent carries the aria-label.
+interface Props {
+  text: string;
+  start?: number;
+  rise?: boolean;
+}
+const { text, start = 0, rise = false } = Astro.props;
+const letters = [...text].map((ch, i) => ({ ch: ch === ' ' ? ' ' : ch, i: i + start }));
+---
+
+{letters.map(({ ch, i }) =>
+  rise ? (
+    <span class="ltr" style={`--i:${i}`}>
+      <span class="wv" style={`--i:${i}`}>
+        {ch}
+      </span>
+    </span>
+  ) : (
+    <span class="wv" style={`--i:${i}`}>
+      {ch}
+    </span>
+  ),
+)}

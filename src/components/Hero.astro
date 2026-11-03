@@ -1,0 +1,95 @@
+---
+import DownloadIcon from './DownloadIcon.astro';
+import SplitText from './SplitText.astro';
+import StickFigure from './StickFigure.astro';
+import TestRunner from './TestRunner.astro';
+import { focus, site } from '../data/site';
+---
+
+<section id="top" class="hero gridbg tt">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="hero-in">
+    <div class="hero-top">
+      <span class="mask hey" aria-hidden="true">
+        <span class="rise">Hey, I'm</span>
+      </span>
+      <ul class="chips fade">
+        {focus.map((f) => (
+          <li class="tt">{f}</li>
+        ))}
+      </ul>
+    </div>
+
+    <h1 class="name" aria-label={`Hey, I'm ${site.name}`}>
+      <span class="mask hey" aria-hidden="true">
+        <span class="rise">Hey, I'm</span>
+      </span>
+      <span class="mask">
+        <span class="line" aria-hidden="true">
+          <SplitText text="Dhandy" rise />
+          <span class="ltr" style="--i:7">
+            <StickFigure variant="peek" />
+          </span>
+        </span>
+      </span>
+      <span class="mask">
+        <span class="line" aria-hidden="true">
+          <SplitText text="Joenathan" start={6} rise />
+          <span class="ltr" style="--i:15">
+            <span class="wv dot" style="--i:15">
+              .
+            </span>
+          </span>
+        </span>
+      </span>
+    </h1>
+
+    <div class="hero-grid">
+      <div class="hero-copy fade">
+        <p class="focus">
+          <span>Focused on </span>
+          <span class="rot" aria-hidden="true">
+            <span class="rot-in">
+              {[...focus, focus[0]].map((f) => (
+                <span>{f}</span>
+              ))}
+            </span>
+          </span>
+          <span class="sr">{focus.join(', ')}</span>
+        </p>
+        <p class="tagline">{site.tagline}</p>
+        <ul class="chips chips-m" aria-hidden="true">
+          {focus.map((f) => (
+            <li class="tt">{f}</li>
+          ))}
+        </ul>
+        <div class="cta">
+          <a class="btn btn-solid tt" href="#projects">
+            <span>See projects</span>
+            <svg
+              aria-hidden="true"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 5v14" />
+              <path d="M6 13l6 6 6-6" />
+            </svg>
+          </a>
+          <a class="btn btn-line tt" href={site.resume} target="_blank" rel="noopener noreferrer">
+            <span class="btn-long">Download resume</span>
+            <span class="btn-short">Resume</span>
+            <DownloadIcon />
+            <span class="sr">(PDF, opens in a new tab)</span>
+          </a>
+        </div>
+      </div>
+      <TestRunner />
+    </div>
+  </div>
+</section>

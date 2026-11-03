@@ -1,0 +1,12 @@
+---
+import { tools } from '../data/tools';
+---
+
+<!-- Decorative: the same list is exposed as text in About. -->
+<div class="band tt" aria-hidden="true">
+  <ul class="marquee">
+    {[...tools, ...tools].map((t) => (
+      <li>{t}</li>
+    ))}
+  </ul>
+</div>
