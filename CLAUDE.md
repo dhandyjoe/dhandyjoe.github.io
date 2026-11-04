@@ -17,7 +17,7 @@ Static personal portfolio for Dhandy Joenathan (QA / SDET), built with Astro and
 
 - Single page: `src/pages/index.astro` composes `src/components/` (Nav, Hero, TestRunner, SkillsBand, Projects, About, Contact, Footer) inside `src/layouts/Base.astro` (head/SEO/JSON-LD, theme bootstrap). `about.html`/`contact.html` are Astro redirects to `/#about` and `/#contact`.
 - Content is data: `src/data/projects.ts` (add a project here; its `cat` must be one of `categories` or the filter won't match), `tools.ts`, `site.ts`.
-- Styling is plain CSS in `src/styles/`: `tokens.css` (light/dark via `html[data-theme]`), `motion.css` (all keyframes), `global.css` (desktop is the base, mobile artboard = `@media (max-width: 760px)`). Change both layouts when changing a section.
+- Styling is plain CSS in `src/styles/`: `tokens.css` (light/dark via `html[data-theme]`), `motion.css` (all keyframes), `global.css` (desktop is the base, mobile artboard = `@media (max-width: 760px)`). Change both layouts when changing a section. Desktop (>760px) is rendered with `html { zoom: 0.85 }`; `zoom` doesn't scale viewport units, so write `calc(N * var(--svh))`/`var(--vw)` instead of `Nsvh`/`Nvw`.
 - Behaviour is small `<script>`s in components: theme toggle + scrollspy (Nav), filters (Projects), test-runner ticker (TestRunner). Theme is set pre-paint by an inline script in `Base.astro`. Respect `prefers-reduced-motion`.
 - Contact has no form/backend: email, LinkedIn, GitHub and resume links only.
 - Resume PDF: `public/cv/`; profile photo: `src/assets/` (optimised by `astro:assets`).
