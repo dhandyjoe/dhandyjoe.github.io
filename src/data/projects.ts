@@ -1,4 +1,10 @@
-export const categories = ['Web', 'Android', 'Quality Assurance', 'Database', 'Vibe Coding'] as const;
+export const categories = [
+  'Web',
+  'Android',
+  'Quality Assurance',
+  'Database',
+  'Vibe Coding',
+] as const;
 export type Category = (typeof categories)[number];
 
 export interface Project {
