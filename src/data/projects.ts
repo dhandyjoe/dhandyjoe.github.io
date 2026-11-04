@@ -1,4 +1,4 @@
-export const categories = ['Web', 'Android', 'Quality Assurance', 'Database'] as const;
+export const categories = ['Web', 'Android', 'Quality Assurance', 'Database', 'Vibe Coding'] as const;
 export type Category = (typeof categories)[number];
 
 export interface Project {
@@ -10,6 +10,20 @@ export interface Project {
 }
 
 export const projects: readonly Project[] = [
+  {
+    title: 'Spartio',
+    kind: 'Web App',
+    cat: 'Vibe Coding',
+    linkLabel: 'Live site',
+    url: 'https://dhandyjoe.github.io/spartio-app/',
+  },
+  {
+    title: 'Plesir',
+    kind: 'Web App',
+    cat: 'Vibe Coding',
+    linkLabel: 'Live site',
+    url: 'https://plesir-app.vercel.app/',
+  },
   {
     title: 'LesGoo',
     kind: 'Web App',
