@@ -17,6 +17,13 @@ export interface Project {
 
 export const projects: readonly Project[] = [
   {
+    title: 'Lumen Survivor',
+    kind: 'Web Game',
+    cat: 'Vibe Coding',
+    linkLabel: 'Live site',
+    url: 'https://dhandyjoe.github.io/lumen-survivor/',
+  },
+  {
     title: 'Spartio',
     kind: 'Web App',
     cat: 'Vibe Coding',
@@ -36,13 +43,6 @@ export const projects: readonly Project[] = [
     cat: 'Web',
     linkLabel: 'GitHub',
     url: 'https://github.com/dhandyjoe/LesGoo#welcome-to-lesgoo-make-your-roadtrip-easier',
-  },
-  {
-    title: 'WorshipNotationScore',
-    kind: 'Web App',
-    cat: 'Web',
-    linkLabel: 'Live site',
-    url: 'https://dhandyjoe.github.io/worship-notation-score-app/',
   },
   {
     title: 'stockku',
