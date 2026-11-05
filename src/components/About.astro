@@ -1,8 +1,9 @@
 ---
 import { Image } from 'astro:assets';
 import DownloadIcon from './DownloadIcon.astro';
+import SparkleIcon from './SparkleIcon.astro';
 import photo from '../assets/photo-update.jpg';
-import { site } from '../data/site';
+import { aiHighlights, site } from '../data/site';
 import { tools } from '../data/tools';
 ---
 
@@ -38,7 +39,26 @@ import { tools } from '../data/tools';
           testing, with a proven track record of keeping software reliable in day-to-day operations
           — catching issues early so teams can ship with confidence.
         </p>
+        <p>
+          I'm also a vibe coding enthusiast, focused on applying AI wherever it makes automation
+          testing better — from writing and maintaining tests to debugging failures — and on using
+          it to build and ship real products of my own.
+        </p>
         <p class="small">Graduate of the Quality Engineer Bootcamp at Alterra Academy.</p>
+      </div>
+      <div class="ai-focus reveal">
+        <span class="label">AI &amp; Vibe Coding</span>
+        <ul>
+          {aiHighlights.map((h) => (
+            <li class="tt">
+              <span class="ai-icon">
+                <SparkleIcon />
+              </span>
+              <h3>{h.title}</h3>
+              <p>{h.text}</p>
+            </li>
+          ))}
+        </ul>
       </div>
       <div class="skills reveal">
         <span class="label">Skills &amp; tools</span>

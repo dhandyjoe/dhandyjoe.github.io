@@ -1,5 +1,6 @@
 ---
 import DownloadIcon from './DownloadIcon.astro';
+import FocusChips from './FocusChips.astro';
 import SplitText from './SplitText.astro';
 import StickFigure from './StickFigure.astro';
 import TestRunner from './TestRunner.astro';
@@ -13,11 +14,7 @@ import { focus, site } from '../data/site';
       <span class="mask hey" aria-hidden="true">
         <span class="rise">Hey, I'm</span>
       </span>
-      <ul class="chips fade">
-        {focus.map((f) => (
-          <li class="tt">{f}</li>
-        ))}
-      </ul>
+      <FocusChips class="fade" />
     </div>
 
     <h1 class="name" aria-label={`Hey, I'm ${site.name}`}>
@@ -58,11 +55,7 @@ import { focus, site } from '../data/site';
           <span class="sr">{focus.join(', ')}</span>
         </p>
         <p class="tagline">{site.tagline}</p>
-        <ul class="chips chips-m" aria-hidden="true">
-          {focus.map((f) => (
-            <li class="tt">{f}</li>
-          ))}
-        </ul>
+        <FocusChips class="chips-m" aria-hidden="true" />
         <div class="cta">
           <a class="btn btn-solid tt" href="#projects">
             <span>See projects</span>
@@ -93,3 +86,16 @@ import { focus, site } from '../data/site';
     </div>
   </div>
 </section>
+
+<script>
+  // Fit the highlight to each rotating word: the rotw keyframes read these widths.
+  const rot = document.querySelector<HTMLElement>('.focus .rot')!;
+  const measure = () =>
+    rot
+      .querySelectorAll<HTMLElement>('.rot-in span')
+      .forEach((word, i) => rot.style.setProperty(`--w${i}`, `${word.offsetWidth}px`));
+
+  measure();
+  document.fonts.ready.then(measure);
+  addEventListener('resize', measure);
+</script>

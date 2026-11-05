@@ -1,4 +1,10 @@
 export const tools = [
+  'Claude Code',
+  'AI Test Generation',
+  'Self-healing Locators',
+  'AI-assisted Debugging',
+  'Vibe Coding',
+  'Playwright',
   'Java',
   'Kotlin',
   'Python',
@@ -24,4 +30,5 @@ export const suite = [
   { name: 'SauceDemo · checkout', tool: 'Cucumber' },
   { name: 'Calculator · arithmetic', tool: 'Appium' },
   { name: 'LesGoo · REST API', tool: 'Rest Assured' },
+  { name: 'AI · self-healing locators', tool: 'Claude' },
 ] as const;
