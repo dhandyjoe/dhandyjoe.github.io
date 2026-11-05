@@ -1,0 +1,23 @@
+---
+import SparkleIcon from './SparkleIcon.astro';
+import { aiFocus, focus } from '../data/site';
+
+const { class: className, ...rest } = Astro.props;
+const others = focus.filter((f) => !aiFocus.includes(f));
+---
+
+<div class:list={['chips', className]} {...rest}>
+  <ul>
+    {others.map((f) => (
+      <li class="tt">{f}</li>
+    ))}
+  </ul>
+  <ul>
+    {aiFocus.map((f) => (
+      <li class="tt chip-ai">
+        <SparkleIcon />
+        {f}
+      </li>
+    ))}
+  </ul>
+</div>

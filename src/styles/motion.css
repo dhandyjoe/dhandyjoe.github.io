@@ -20,25 +20,64 @@
     transform: none;
   }
 }
+/* One 2.5s stop per word in `focus` (site.ts), plus the repeated first word. rot slides the word
+   and rotw fits the highlight to it, so they share stops, duration and easing. */
 @keyframes rot {
   0%,
-  20% {
+  13.33% {
     transform: translateY(0);
   }
-  25%,
-  45% {
+  16.67%,
+  30% {
     transform: translateY(-1.2em);
   }
-  50%,
-  70% {
+  33.33%,
+  46.67% {
     transform: translateY(-2.4em);
   }
-  75%,
-  95% {
+  50%,
+  63.33% {
     transform: translateY(-3.6em);
   }
-  100% {
+  66.67%,
+  80% {
     transform: translateY(-4.8em);
+  }
+  83.33%,
+  96.67% {
+    transform: translateY(-6em);
+  }
+  100% {
+    transform: translateY(-7.2em);
+  }
+}
+@keyframes rotw {
+  0%,
+  13.33% {
+    width: var(--w0, auto);
+  }
+  16.67%,
+  30% {
+    width: var(--w1, auto);
+  }
+  33.33%,
+  46.67% {
+    width: var(--w2, auto);
+  }
+  50%,
+  63.33% {
+    width: var(--w3, auto);
+  }
+  66.67%,
+  80% {
+    width: var(--w4, auto);
+  }
+  83.33%,
+  96.67% {
+    width: var(--w5, auto);
+  }
+  100% {
+    width: var(--w6, auto);
   }
 }
 @keyframes spin {
@@ -187,19 +226,23 @@
 
 .rot {
   display: inline-block;
+  width: var(--w0, auto);
   height: 1.2em;
   overflow: hidden;
   vertical-align: bottom;
+  animation: rotw 15s cubic-bezier(0.75, 0, 0.2, 1) infinite;
 }
 .rot-in {
   display: flex;
   flex-direction: column;
-  animation: rot 10s cubic-bezier(0.75, 0, 0.2, 1) infinite;
+  align-items: flex-start;
+  animation: rot 15s cubic-bezier(0.75, 0, 0.2, 1) infinite;
 }
 .rot-in span {
   display: block;
   height: 1.2em;
   line-height: 1.2em;
+  white-space: nowrap;
 }
 .spin {
   animation: spin 0.8s linear infinite;

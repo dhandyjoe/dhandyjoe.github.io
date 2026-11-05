@@ -1,9 +1,9 @@
 export const categories = [
+  'Vibe Coding',
   'Web',
   'Android',
   'Quality Assurance',
   'Database',
-  'Vibe Coding',
 ] as const;
 export type Category = (typeof categories)[number];
 
@@ -17,11 +17,11 @@ export interface Project {
 
 export const projects: readonly Project[] = [
   {
-    title: 'Lumen Survivor',
+    title: 'Ravenhold Survivor',
     kind: 'Web Game',
     cat: 'Vibe Coding',
     linkLabel: 'Live site',
-    url: 'https://dhandyjoe.github.io/lumen-survivor/',
+    url: 'https://dhandyjoe.github.io/ravenhold-survivor/',
   },
   {
     title: 'Spartio',

@@ -1,5 +1,6 @@
 import { expect, test } from '@playwright/test';
 import { categories, projects } from '../src/data/projects';
+import { focus } from '../src/data/site';
 import { suite } from '../src/data/tools';
 
 test.beforeEach(async ({ page }) => {
@@ -89,5 +90,27 @@ test('skills band sits at the bottom of the first screen on desktop', async ({ p
     const bottom = await page.locator('.band').evaluate((el) => el.getBoundingClientRect().bottom);
     expect(bottom, `${width}x${height}`).toBeLessThanOrEqual(height + 0.5);
     expect(bottom, `${width}x${height}`).toBeGreaterThan(height - 4);
+  }
+});
+
+test('focus highlight fits each rotating word', async ({ page }) => {
+  await page.evaluate(() => document.fonts.ready);
+  for (const i of focus.keys()) {
+    const { pill, word, top } = await page.evaluate((i) => {
+      const rot = document.querySelector<HTMLElement>('.focus .rot')!;
+      const span = rot.querySelectorAll<HTMLElement>('.rot-in span')[i]!;
+      // Seek to the middle of this word's stop.
+      for (const a of rot.getAnimations({ subtree: true })) {
+        a.pause();
+        a.currentTime = i * 2500 + 1000;
+      }
+      return {
+        pill: parseFloat(getComputedStyle(rot).width),
+        word: span.offsetWidth,
+        top: Math.abs(span.getBoundingClientRect().top - rot.getBoundingClientRect().top),
+      };
+    }, i);
+    expect(Math.abs(pill - word), focus[i]).toBeLessThanOrEqual(1);
+    expect(top, focus[i]).toBeLessThanOrEqual(1);
   }
 });

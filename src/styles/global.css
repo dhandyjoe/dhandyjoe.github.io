@@ -293,12 +293,14 @@ ul {
   flex-direction: column;
   gap: clamp(16px, calc(3 * var(--svh)), 44px);
 }
+/* Lifts the greeting and name; .hero-grid's matching margin keeps the rest of the hero in place. */
 .hero-top {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 16px;
+  margin-top: calc(-3 * var(--svh));
 }
 .hey {
   font-size: clamp(18px, min(calc(2 * var(--vw)), calc(3 * var(--svh))), 26px);
@@ -312,16 +314,41 @@ ul {
 }
 .chips {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-end;
   gap: 8px;
   font-family: var(--font-mono);
   font-size: 13px;
+}
+/* Only the first row sits level with "Hey, I'm"; the second hangs beside the name without pushing it down. */
+.hero-top .chips {
+  position: relative;
+}
+.hero-top .chips ul:last-child {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+}
+.chips ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: inherit;
 }
 .chips li {
   padding: 8px 12px;
   border-radius: 8px;
   border: 1px solid var(--border);
   background: var(--surface);
+}
+.chips .chip-ai {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #111110;
+  font-weight: 600;
 }
 .chips-m {
   display: none;
@@ -346,6 +373,7 @@ ul {
   grid-template-columns: repeat(auto-fit, minmax(min(460px, 100%), 1fr));
   gap: clamp(24px, calc(4 * var(--svh)), 48px);
   align-items: end;
+  margin-top: calc(3 * var(--svh));
 }
 .hero-copy {
   display: flex;
@@ -360,6 +388,7 @@ ul {
   font-weight: 500;
 }
 .focus .rot {
+  box-sizing: content-box;
   background: var(--accent);
   color: #111110;
   padding: 0 10px;
@@ -578,6 +607,9 @@ ul {
   font-size: 12px;
   color: var(--muted);
 }
+.tab svg {
+  margin-right: -2px;
+}
 .tab[aria-pressed='true'] {
   border-color: var(--tab-bg);
   background: var(--tab-bg);
@@ -629,6 +661,19 @@ ul {
   transition:
     transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
     color 0.35s ease;
+}
+.ai-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 6px;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #111110;
+  font-size: 11px;
+  font-weight: 600;
+  vertical-align: 1px;
 }
 .card .arrow {
   flex-shrink: 0;
@@ -794,6 +839,48 @@ ul {
 }
 .prose .small {
   font-size: 0.82em;
+  color: var(--muted);
+}
+.ai-focus {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.ai-focus ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.ai-focus li {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+.ai-icon {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 4px;
+  border-radius: 9px;
+  background: var(--accent);
+  color: #111110;
+}
+.ai-focus h3 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+.ai-focus p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
   color: var(--muted);
 }
 .skills {
@@ -1083,13 +1170,16 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 28px;
+    margin-top: 0;
   }
   .hero-copy {
     gap: 20px;
     max-width: none;
   }
   .focus {
-    font-size: 21px;
+    /* Scales down on narrow phones so the longest word never wraps and shifts the page. */
+    font-size: min(21px, calc(5.6 * var(--vw)));
+    white-space: nowrap;
   }
   .focus .rot {
     padding: 0 8px;
@@ -1102,8 +1192,12 @@ ul {
     display: flex;
   }
   .chips {
+    align-items: flex-start;
     gap: 6px;
     font-size: 11px;
+  }
+  .chips ul {
+    justify-content: flex-start;
   }
   .chips li {
     padding: 6px 10px;
@@ -1282,6 +1376,17 @@ ul {
   }
   .prose .small {
     font-size: 0.85em;
+  }
+  .ai-focus {
+    gap: 12px;
+  }
+  .ai-focus ul {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+  .ai-focus li {
+    padding: 14px;
+    border-radius: 12px;
   }
   .skills {
     gap: 12px;
