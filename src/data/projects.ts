@@ -17,6 +17,13 @@ export interface Project {
 
 export const projects: readonly Project[] = [
   {
+    title: 'Casebook',
+    kind: 'Web App',
+    cat: 'Vibe Coding',
+    linkLabel: 'Live site',
+    url: 'https://casebook-1qd.pages.dev/',
+  },
+  {
     title: 'Ravenhold Survivor',
     kind: 'Web Game',
     cat: 'Vibe Coding',
