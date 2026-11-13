@@ -6,7 +6,10 @@ import { categories, projects } from '../data/projects';
 
 const filters = ['All', ...categories].map((label) => ({
   label,
-  count: label === 'All' ? projects.length : projects.filter((p) => (p.cats as readonly string[]).includes(label)).length,
+  count:
+    label === 'All'
+      ? projects.length
+      : projects.filter((p) => (p.cats as readonly string[]).includes(label)).length,
 }));
 const items = projects.map((p, i) => ({ ...p, num: String(i + 1).padStart(2, '0') }));
 ---
