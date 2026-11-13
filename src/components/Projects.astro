@@ -6,7 +6,7 @@ import { categories, projects } from '../data/projects';
 
 const filters = ['All', ...categories].map((label) => ({
   label,
-  count: label === 'All' ? projects.length : projects.filter((p) => p.cat === label).length,
+  count: label === 'All' ? projects.length : projects.filter((p) => (p.cats as readonly string[]).includes(label)).length,
 }));
 const items = projects.map((p, i) => ({ ...p, num: String(i + 1).padStart(2, '0') }));
 ---
@@ -51,12 +51,12 @@ const items = projects.map((p, i) => ({ ...p, num: String(i + 1).padStart(2, '0'
           href={p.url}
           target="_blank"
           rel="noopener noreferrer"
-          data-cat={p.cat}
+          data-cats={p.cats.join('|')}
         >
           <div class="card-top">
             <span class="muted num">
-              {p.num} — {p.cat}
-              {p.cat === 'Vibe Coding' && (
+              {p.num} — {p.cats.join(' · ')}
+              {p.cats.includes('Vibe Coding') && (
                 <span class="ai-tag">
                   <SparkleIcon />
                   AI-built
@@ -111,7 +111,7 @@ const items = projects.map((p, i) => ({ ...p, num: String(i + 1).padStart(2, '0'
       const filter = tab.dataset.filter;
       let shown = 0;
       for (const c of cards) {
-        const show = filter === 'All' || c.dataset.cat === filter;
+        const show = filter === 'All' || c.dataset.cats!.split('|').includes(filter!);
         c.hidden = !show;
         if (show) shown++;
       }

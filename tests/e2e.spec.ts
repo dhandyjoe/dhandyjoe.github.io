@@ -29,9 +29,9 @@ test('filters show the right projects and counts', async ({ page }) => {
   await expect(cards).toHaveCount(projects.length);
   for (const cat of categories) {
     await page.getByRole('button', { name: new RegExp(`^${cat}`) }).click();
-    await expect(cards).toHaveCount(projects.filter((p) => p.cat === cat).length);
+    await expect(cards).toHaveCount(projects.filter((p) => p.cats.includes(cat)).length);
     await expect(page.locator('#shown-count')).toHaveText(
-      `(${projects.filter((p) => p.cat === cat).length})`,
+      `(${projects.filter((p) => p.cats.includes(cat)).length})`,
     );
   }
   await page.getByRole('button', { name: /^All/ }).click();
