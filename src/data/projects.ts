@@ -75,7 +75,7 @@ export const projects: readonly Project[] = [
   },
   {
     title: 'Appium with Javascript',
-    kind: 'Mobile Automation',
+    kind: 'PracticeMart',
     cats: ['Test Automation'],
     linkLabel: 'GitHub',
     url: 'https://github.com/dhandyjoe/automation-appium-javascript',
