@@ -1,10 +1,4 @@
-export const categories = [
-  'Vibe Coding',
-  'Web',
-  'Android',
-  'Quality Assurance',
-  'Database',
-] as const;
+export const categories = ['Vibe Coding', 'Web', 'Android', 'Test Automation', 'Database'] as const;
 export type Category = (typeof categories)[number];
 
 export interface Project {
@@ -80,11 +74,18 @@ export const projects: readonly Project[] = [
     url: 'https://github.com/dhandyjoe/appdevo-mobile',
   },
   {
-    title: 'Appium Testing',
-    kind: 'Simple Calculator App',
-    cats: ['Quality Assurance'],
+    title: 'Appium with Javascript',
+    kind: 'Mobile Automation',
+    cats: ['Test Automation'],
     linkLabel: 'GitHub',
-    url: 'https://github.com/dhandyjoe/Appium-SimpleCalculatorApp',
+    url: 'https://github.com/dhandyjoe/automation-appium-javascript',
+  },
+  {
+    title: 'Appium with Java',
+    kind: 'Simple Calculator App',
+    cats: ['Test Automation'],
+    linkLabel: 'GitHub',
+    url: 'https://github.com/dhandyjoe/automation-appium-java',
   },
   {
     title: 'Movie-ku',
@@ -96,14 +97,14 @@ export const projects: readonly Project[] = [
   {
     title: 'Selenium Testing',
     kind: 'Cucumber · SauceDemo',
-    cats: ['Quality Assurance'],
+    cats: ['Test Automation'],
     linkLabel: 'GitHub',
     url: 'https://github.com/dhandyjoe/SeleniumCucumber-SauceDemo',
   },
   {
     title: 'Rest Assured Testing',
     kind: 'LesGoo API',
-    cats: ['Quality Assurance'],
+    cats: ['Test Automation'],
     linkLabel: 'GitHub',
     url: 'https://github.com/dhandyjoe/capstone-alterra-LesGoo-RestAssured#-reports',
   },
