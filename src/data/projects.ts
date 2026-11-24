@@ -20,7 +20,7 @@ export const projects: readonly Project[] = [
   {
     title: 'PracticeMart.web',
     kind: 'Web App',
-    cats: ['Web'],
+    cats: ['Vibe Coding', 'Web'],
     linkLabel: 'Live site',
     url: 'https://practicemart-fdc73.web.app/',
   },
