@@ -11,11 +11,18 @@ export interface Project {
 
 export const projects: readonly Project[] = [
   {
-    title: 'PracticeMart',
+    title: 'PracticeMart.apps',
     kind: 'Android App',
     cats: ['Vibe Coding', 'Android'],
     linkLabel: 'GitHub',
     url: 'https://github.com/dhandyjoe/PracticeMarket.apps',
+  },
+  {
+    title: 'PracticeMart.web',
+    kind: 'Web App',
+    cats: ['Web'],
+    linkLabel: 'Live site',
+    url: 'https://practicemart-fdc73.web.app/',
   },
   {
     title: 'Casebook',
